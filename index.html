@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="global" >
+        <div id="app" v-cloak>
+            <div id="titre">
+                {{header}}
+            </div>
+            <div class="list"><p>{{newValue.length}} /32</p>
+                <input type="text" v-model="newValue" class="input" @keyup.enter="add">
+                <button type="submit" name="add" :disabled="newValue.length===0" @click="add">ADD</button>
+                <p class="message" v-if="toDo.length === 0">Add Here by writing in the field and clicking "Add" or pressing "enter"</p>
+                <div class="listItems">
+                    <ul>
+                        <li v-for="(item,id) in toDo" class="list">
+                            <p :class={done:done} itemList>{{item.label}}</p> 
+                            <div class="buttons">
+                                <button value="" @click="pop(item)">DELETE</button>
+                                <button value="" @click="important=!important">IMPORTANT</button>
+                                <button value="" @click="done=!done">DONE/TO DO</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script><!--first-->
+    <script src="JS.js"></script>
+</body>
+</html>
