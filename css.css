@@ -7,9 +7,10 @@
 }
 @media only screen {
     body{
-        max-width:1000px;
+        max-width:100%;
         max-height: 100000px;
-        margin: auto;
+        margin-left:auto;
+        margin-left:auto;
     }
 }
 @font-face {
@@ -19,12 +20,14 @@
 html {
     background-color:#050505;
 }
-.global {
-    height: 100%;
-    width: 100%;
+.global {  
     border-radius:10px;
-    margin-left:40%;
-    padding: 15px 15px 15px 15px;
+    margin-left:auto;
+    margin-left:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 #titre {
     font-size:150px;
@@ -51,11 +54,9 @@ li {
     background: black;
     border: none;
 }
-.listItems {
-
-}
-p {
+.itemList {
     align-items:center;
+    max-width: 900px;
 }
 button {
     margin-left:10px;
@@ -69,6 +70,8 @@ button {
 }
 .buttons {
     margin-left:20px;
+    display: flex;
+    flex-direction: row;
 }
 #titre {
     color:dodgerblue;
@@ -76,4 +79,7 @@ button {
 .done{
     color: green;   
     text-decoration: line-through;
+}
+.itemList {
+
 }

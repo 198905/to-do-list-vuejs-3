@@ -11,6 +11,7 @@ methods: {
     add:function() {
         this.toDo.push({index:this.toDo.length+1,label:this.newValue});
         this.newValue="";
+        
         },
     pop:function(item) {
         this.toDo=this.toDo.filter(i=>i !==item)

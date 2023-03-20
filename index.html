@@ -16,11 +16,11 @@
             <div class="list"><p>{{newValue.length}} /32</p>
                 <input type="text" v-model="newValue" class="input" @keyup.enter="add">
                 <button type="submit" name="add" :disabled="newValue.length===0" @click="add">ADD</button>
-                <p class="message" v-if="toDo.length === 0">Add Here by writing in the field and clicking "Add" or pressing "enter"</p>
+                <p class="message" v-if="toDo.length === 0">Add Here and click "Add" or press "enter"</p>
                 <div class="listItems">
                     <ul>
                         <li v-for="(item,id) in toDo" class="list">
-                            <p :class={done:done} itemList>{{item.label}}</p> 
+                            <p :class={done:done} class="itemList>{{item.label}}</p> 
                             <div class="buttons">
                                 <button value="" @click="pop(item)">DELETE</button>
                                 <button value="" @click="important=!important">IMPORTANT</button>
